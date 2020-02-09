@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metafile version="3.9" client="administrator">
+	<tag>lt-LT</tag>
+	<name>Lithuanian (Lithuania)</name>
+	<description><![CDATA[Joomla! administratoriaus lietuvių kalbos paketas]]></description>
+	<version>3.9.6.1</version>
+	<creationDate>2019-06-06</creationDate>
+	<author>Rimvydas Žilinskas</author>
+	<authorEmail>rimvydas@rimvydas.info</authorEmail>
+	<authorUrl></authorUrl>
+	<copyright>Copyright (C) 2005 - 2018 Open Source Matters. Visos teisės saugomos.</copyright>
+	<license>GNU General Public License versija 2 arba naujesnė; žr. LICENSE.txt</license>
+	<metadata>
+		<name>Lithuanian (Lithuania)</name>
+		<nativeName>Lietuvių (Lietuva)</nativeName>
+		<tag>lt-LT</tag>
+		<rtl>0</rtl>
+		<locale>lt_LT.utf8, lt_LT.UTF-8, lt_LT, lit_LT, lt, lithuanian, lit, lietuva, lietuvių</locale>
+		<firstDay>1</firstDay>
+		<weekEnd>0,6</weekEnd>
+		<calendar>gregorian</calendar>
+	</metadata>
+	<params/>
+</metafile>

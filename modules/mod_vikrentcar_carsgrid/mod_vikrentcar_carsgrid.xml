@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>VikRentCar Grid Cars</name>
+	<author>Extensionsforjoomla.com</author>
+	<creationDate>June 2013</creationDate>
+	<copyright>Copyright (C) 2013 Extensionsforjoomla.com. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>tech@extensionsforjoomla.com</authorEmail>
+	<authorUrl>www.extensionsforjoomla.com</authorUrl>
+	<version>1.1</version>
+	<description>This module shows a list of vehicles created with the component VikRentCar v1.7 or higher.</description>
+	<files>
+		<filename module="mod_vikrentcar_carsgrid">mod_vikrentcar_carsgrid.php</filename>
+		<folder>tmpl</folder>
+		<folder>php</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_vikrentcar_carsgrid.xml</filename>
+		<filename>mod_vikrentcar_carsgrid.css</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">languages/en-GB/en-GB.mod_vikrentcar_carsgrid.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/modules/mod_vikrentcar_carsgrid/php">
+				<field name="Header01" type="header" default="Configuration" label="" description="" />
+
+				<field name="numb" type="text" default="4" label="Number of Vehicles Displayed" description="Number of Vehicles Displayed" size="5" filter="integer"/>
+				<field name="query" type="list" default="price" label="Ordering and Filtering" description="Ordering and Filtering">
+					<option value="price">By Price</option>
+					<option value="name">By Name</option>
+					<option value="category">By Category</option>
+				</field>
+				<field name="order" type="list" default="asc" label="Order Type" description="Ascending or Descending">
+					<option value="asc">Ascending</option>
+					<option value="desc">Descending</option>
+				</field>
+				<field name="show_desc" type="list" default="0" label="Show Description" description="">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="currency" type="text" default="€" label="Currency Symbol" description="Your Currency Symbol" size="10" filter="raw" />
+				<field name="showcatname" type="list" default="1" label="Show Category Name" description="Show Category Name" >
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field name="Header02" type="header" default="Filtering by Category" label="" description="" />
+				<field name="catid" type="sql" default="0" label="Select a Category" query="SELECT id, name FROM #__vikrentcar_categories" key_field="id" value_field="name"/>
+				<field name="querycat" type="list" default="price" label="Ordering" description="Ordering">
+					<option value="price">By Price</option>
+					<option value="name">By Name</option>
+				</field>
+
+				<field name="Header03" type="header" default="Joomla!" label="" description="" />
+				<field name="itemid" type="menuitem" default="" label="Select a menu item" description="Select a menu item" />
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="Module Class Suffix, in case your template would like one" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

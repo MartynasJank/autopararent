@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+@default_width : 1280px;
+@resize1_width : 1024px;
+@resize2_width : 980px;
+
+@h_search : 400px;
+@h_slidesearch : @default_width - @h_search + 130px;
+
+.leftsearch {
+	@media screen {
+		left: calc(@default_width - @h_slidesearch);
+		@media (max-width : 1350px) {
+			left: calc(@resize1_width - @h_slidesearch);
+		}
+		@media (max-width : 1024px) {
+			left: calc(@resize2_width - @h_slidesearch);
+		}
+	}
+}
+.rightsearch {
+	@media screen {
+		right: calc(@default_width - @h_slidesearch);
+		@media (max-width : 1350px) {
+			right: calc(@resize1_width - @h_slidesearch);
+		}
+		@media (max-width : 1024px) {
+			right: calc(@resize2_width - @h_slidesearch);
+		}
+	}
+}
+
+/**** RESPONSIVE ****/
+
+@media screen and (max-width : 1350px) {
+
+    #mainmenu .spt-menu {
+        margin: 0 0 0 5em !important;
+    }
+}
+@media screen and (max-width : 1024px) {
+
+    #mainmenu .spt-menu {
+        margin: 0 0 0 2em !important;
+    }
+}

@@ -1,0 +1,379 @@
+@charset "utf-8";
+
+/**** Logo Rounded ****/
+#tbar-logo-center {
+	display: table;
+	margin: 0 auto;
+}
+.logorounded {
+	display: table;
+	margin: -31px auto 0;
+}
+/**** Module centered ****/
+.module-centered {
+	width: 1280px;
+	margin: 90px auto !important;
+}
+
+/**** White - it makes white the background of the module. For the alignments with the website's spaces the padding it's 0 **/
+.grid-module > .white {
+	background: #fff;
+	padding: 20px;
+}
+
+/**** Grey - it makes grey the background of the module. **/
+.grid-module > .moduletable.grey {
+	background: #eee;
+	padding: 25px 20px !important;
+}
+
+/**** Module Services **/
+.grid-module > .moduletable.mod-services {
+	padding-top:40px !important;
+}
+
+/*** Background Transparent ***/
+.grid-module > .bg-transp {
+	background: transparent;
+}
+
+/**** imglarge - this cancel the padding only for the images **/
+.grid-module > .imglarge {
+	overflow: hidden;
+}
+.grid-module > .imglarge h3 {
+	padding: 0 0 25px 0;
+}
+.grid-module > .imglarge img {
+	margin: -9px 0 0 -10px;
+	width: 108%;
+}
+.grid-module > .imglarge.white h3, .grid-module > .imglarge.grey h3 {
+	padding: 0;
+}
+.grid-module > .imglarge.white img, .grid-module > .imglarge.grey img {
+	margin: 0;
+}
+
+/**** leftborder - this cancel the padding only for the images **/
+
+.grid-module > .leftborder {
+	overflow: hidden;
+}
+.grid-module > .leftborder h3 {
+	/*margin: -15px 0 17px -15px;*/
+	margin: 10px 0 17px 0px;
+	padding: 0 0 0 15px;
+	border-left:3px solid #eee;
+}
+.grid-module > .leftborder.white h3 {
+	margin: 0 0 17px;
+}
+
+/**** rightborder - this cancel the padding only for the images **/
+
+.grid-module > .rightborder {
+	overflow: hidden;
+}
+.grid-module > .rightborder h3 {
+	/*margin: -15px 0 17px -15px;*/
+	margin: 10px 0 17px 0px;
+	padding: 0 15px 0 0;
+	border-right:3px solid #eee;
+}
+.grid-module > .rightborder.white h3 {
+	margin: 0 0 17px;
+}
+
+/**** Middle line Title ***/
+
+.grid-module > .middle-line > h3 {
+	position: relative;
+}
+.grid-module > .middle-line > h3:before {
+	width: 100%;
+	height: 1px;
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 50%;
+	background: #ccc;
+	z-index: 1;
+}
+.grid-module > .middle-line .e4j-menutitle-cnt {
+	background: #fff;
+	padding: 0 10px 0 0;
+	z-index: 10;
+	position: relative;
+}
+#upcontent .grid-module > .middle-line .e4j-menutitle-cnt {
+	background: #f1f1f1;
+}
+
+/**** Center Title ***/
+
+.grid-module > .title-center > h3 {
+	text-align: center;
+	margin: 0 auto 10px;
+	display: table;
+	width: 80%;
+}
+
+.grid-module > .title-center .e4j-menutitle-cnt {
+	padding: 0 15px;
+}
+
+/*** Underline Title ***/
+
+.grid-module > .underline > h3 {
+	position: relative;
+	border-bottom:1px solid #ddd;
+	padding: 0 0 4px 0;
+	margin-bottom:12px;
+}
+
+/**** Right Title ***/
+
+.grid-module > .title-right > h3 {
+	text-align: right;
+}
+
+.grid-module > .title-right .e4j-menutitle-cnt {
+	padding: 0;
+}
+
+/*** Border Coloured ***/
+
+.grid-module > .border {
+	border-width: 1px;
+	border-style: solid;
+	padding: 17px;
+	color: #666;
+	font-size: 16px;
+}
+
+/*** Color module Light ***/
+
+.moduletable.color-light {
+	padding: 25px !important;
+	font-size: 16px;
+
+}
+
+/*** Color module ***/
+
+.moduletable.color {
+	padding: 25px !important;
+	font-size: 16px;
+}
+.moduletable.color h1 {
+	color: #fff;
+}
+
+/*** Menu Inline ***/
+.menu-inline ul {
+	margin: 45px 0;
+}
+.menu-inline li {
+	display: inline-block;
+	margin: 0 20px;
+}
+
+/*** Newlsetter Custom ***/
+.custom-newsletter h4 {
+	font-weight: 400;
+}
+.custom-newsletter input[type^="text"] {
+	background: rgba(255, 255, 255, 0.3) none repeat scroll 0 0;
+	border:2px solid #fff;
+	padding:5px 10px 8px;
+	color: #fff;
+	margin-bottom:5px;
+	display: block;
+	width: 250px;
+}
+.custom-newsletter input[type^="submit"] {
+	background: rgba(255, 255, 255, 0.3) none repeat scroll 0 0;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 0 5px;
+    padding: 7px 25px;
+	transition: all 400ms ease-in-out 0s;
+	-moz-transition: all 400ms ease-in-out 0s;
+	-webkit-transition: all 400ms ease-in-out 0s;
+	-o-transition: all 400ms ease-in-out 0s;
+}
+.custom-newsletter input[type^="submit"]:hover {
+	background: rgba(255,255,255,0);
+	transition:all 400ms ease-in-out 0s;
+	-moz-transition:all 400ms ease-in-out 0s;
+	-webkit-transition:all 400ms ease-in-out 0s;
+	-o-transition:all 400ms ease-in-out 0s;
+}
+.vikwallimage-desc h2 {
+	margin-top: 0;
+	padding-top: 0;
+}
+.custom-newsletter h3 {
+	font-weight: 400;
+	font-size: 26px;
+	padding: 0;
+	margin: 0;
+}
+.e4j-float-left > h4 {
+    font-size: 16px;
+    margin: 3px 0 0;
+    padding: 0;
+}
+.e4j-newslett {
+	display: table;
+	margin: 0 auto;
+}
+.e4j-newslett .e4j-float-left {
+	float: left;
+	display: inline-block;
+	margin: 18px 7em 0 0;
+}
+.e4j-newslett .e4j-float-right {
+	float: right;
+	display: inline-block;
+}
+.custom-newsletter .vikwallimage-inner {
+}
+/*** Activties Boxes ***/
+
+.activities-cnt {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	margin:75px 0 40px;
+}
+.activities-cnt-inner {
+	width: 22%;
+	display: inline-block;
+	position: relative;
+	background: #fff;
+	padding: 15px 0;
+	margin: 0 30px 0 0;
+	border:1px solid #fff;
+}
+.activities-cnt-inner:last-child {
+	margin: 0;
+}
+.activities-cnt-img {
+	position: absolute;
+	top: -55px;
+	width: 100%;
+}
+.activities-cnt-img img {
+	width: 135px;
+	height: 135px;
+	border-radius: 50%;
+	text-align: center;
+}
+.activities-cnt-text h4 {
+	font-size: 22px;
+}
+.activities-cnt-text {
+	font-size: 16px;
+	padding: 75px 15px 15px;
+}
+
+/*** VikContentSlider ***/
+
+#contain-slider .vikcs-slide h2 {
+    top: 8vw !important;
+    font-size: 3vw !important;
+}
+#contain-slider .vikcs-slide p {
+	top: 12vw !important;
+	font-size: 1.3vw !important;
+}
+#contain-slider .vikcs-slide .vikcs-link {
+	top: 16vw !important;
+}
+
+.vikcs-slide .vikcs-link a {
+	border-radius: 4px !important;
+	font-weight: 400;
+	font-size: 12px !important;
+}
+.vikcs-slide .vikcs-link a {
+	position: relative;
+}
+.vikcs-slide .vikcs-link a:after {
+	position: absolute;
+	width: 100px;
+	height: 2px;
+	content: "";
+	top: 17px;
+	left: -120%;
+	background: rgba(255, 255, 255, 0.8);
+}
+.vikcs-slide .vikcs-link a:before {
+	position: absolute;
+	width: 100px;
+	height: 2px;
+	content: "";
+	top: 17px;
+	right: -120%;
+	background: rgba(255, 255, 255, 0.8);
+}
+
+/*** Cart ***/
+.modopen.cart > div {
+	padding: 20px 0 0;
+}
+.modopen.cart > div h4 {
+	padding: 0 20px;
+}
+.modopen.cart > div .modvev-cart-reservations-list .modvev-cart-reservation-block {
+	padding: 10px 20px;
+	border-color: #444;
+}
+.modopen.cart > div .modvev-cart-totalamount {
+	background: #444;
+	padding: 10px 20px;
+}
+.mod_vevcart-empty-wrapper {
+	padding: 10px 0;
+}
+.mod_vevcart-empty-wrapper h4 {
+	font-size: 0.9em;
+}
+
+/*** Sponsor ***/
+.sponsor-main {
+	display: inline-block;
+	width: 100%;
+}
+.sponsor-main > div {
+	border:2px solid #ddd;
+	padding: 5px;
+	float: left;
+	display: inline-block;
+	margin:5px;
+	transition: all 400ms ease-in-out 0s;
+	-moz-transition: all 400ms ease-in-out 0s;
+	-webkit-transition: all 400ms ease-in-out 0s;
+	-o-transition: all 400ms ease-in-out 0s;
+}
+.sponsor-main > div:hover {
+	transition: all 400ms ease-in-out 0s;
+	-moz-transition: all 400ms ease-in-out 0s;
+	-webkit-transition: all 400ms ease-in-out 0s;
+	-o-transition: all 400ms ease-in-out 0s;
+}
+
+/*** Vik Icons **/
+footer .vikicons-item-inner {
+	
+}
+/*** Hide on Devices ***/
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	.device-off {
+		display: none;
+	}
+}

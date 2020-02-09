@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" client="site" type="language" method="upgrade">
+	<name>Lithuanian (Lithuania)</name>
+	<tag>lt-LT</tag>
+	<version>3.9.6.1</version>
+	<creationDate>2019-06-06</creationDate>
+	<author>Rimvydas Žilinskas</author>
+	<authorEmail>rimvydas@rimvydas.info</authorEmail>
+	<authorUrl></authorUrl>
+	<copyright>Copyright (C) 2005 - 2018 Open Source Matters. Visos teisės saugomos.</copyright>
+	<license>GNU General Public License versija 2 arba naujesnė; žr. LICENSE.txt</license>
+	<description>lt-LT site language</description>
+	<files>
+		<folder>/</folder>
+		<filename file="meta">install.xml</filename>
+	</files>
+	<params/>
+</extension>

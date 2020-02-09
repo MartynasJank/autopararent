@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>VikGoogleMaps</name>
+	<author>e4j - Extensionsforjoomla.com</author>
+	<creationDate>June 2013</creationDate>
+	<copyright>Copyright (C) 2013 Extensionsforjoomla.com. All rights reserved.</copyright>
+	<authorEmail>tech@extensionsforjoomla.com</authorEmail>
+	<authorUrl>www.extensionsforjoomla.com</authorUrl>
+	<version>3.2</version>
+	<description>
+	<![CDATA[ <style type="text/css" media="all">
+						<!--
+		.controls .editor {
+		width:50%;
+		}
+		.controls .editor iframe {
+		height:300px !important;
+		} 
+		.vik-header {
+		    font-size: 1.2em;
+    		text-transform: uppercase;
+    	}
+    	.vik-apikey {
+    		border: 2px dashed #cc0000;
+			border-radius: 3px;
+			padding: 15px;
+    	}
+    	.vik-message {
+    		border: 2px dashed #3071a9;
+			border-radius: 3px;
+			padding: 15px;
+			background: #f6f6f6;
+			display: inline-block;
+    	}
+	-->
+	</style>
+	<div style="font-weight:normal; font-size:13px;">
+	<h2 style="color:#666; font-size:22px; font-weight:normal; border-bottom:1px solid #ddd;">VikGoogleMaps</h2>
+	<p>Module for creating Google Maps with markers on your locations with descriptions. <br />Set the latitude and the longitude coordinates of your locations and optionally add a text, a description and a customized image and shadow for the marker. <br/>The default images are located in the folders /modules/mod_vikgooglemaps/src/markers/markers/ shadows and shapes. Leave the image fields empty to use the default Google Marker.
+	</p>
+	<h3 style="color:#666;">Features:</h3>
+	<ul class="e4jfeatured"><li>Add multiple markers for your locations on Google Maps</li><li>Custom images for your markers</li><li>5 different Map Styles</li><li>Custom map size</li><li>Compatible width any browser</li><li>Compatible with Joomla 2.5/3.x </li></ul>
+	<br />
+	<br />
+	<div style="font-size:13px; float:right;"><a style="color:#666;" href="http://extensionsforjoomla.com/" target="_blank">Copyright Extensions For Joomla</a></div>
+	
+	</div>]]>
+	</description>
+
+	<files>
+		<filename module="mod_vikgooglemaps">mod_vikgooglemaps.php</filename>
+		<filename>mod_vikgooglemaps.xml</filename>
+		<filename>mod_vikgooglemaps.css</filename>
+		<filename>index.html</filename>
+		<folder>src</folder>
+		<folder>fonts</folder>
+		<folder>php</folder>
+	</files>
+ 
+	<config>
+		<fields name="params">
+			<fieldset name="Mapsettings" label="Map settings" addfieldpath="/modules/mod_vikgooglemaps/php">
+				<field name="width" type="text" default="100%" label="Map Width" description="In px or % value" />
+				<field name="height" type="text" default="200px" label="Map Height" description="In px or % value" />
+				<field name="mapstyle" type="list" default="0" label="Map Style" description="Set your Map Style">
+					<option value="0">Default</option>
+					<option value="1">Grayscale</option>
+					<option value="2">Midnight</option>
+					<option value="3">Blue Essence</option>
+					<option value="4">Nature</option>
+				</field>
+				<field name="mapcenter" type="header" default="Map Center and Zoom level" label="" />
+
+				<field name="zoom" type="text" default="8" label="Zoom Level" description="Zoom map Level" />
+				<field name="center_lat" type="text" default="" label="Center map Latitute" description="Map Center point - Latitude" />
+				<field name="center_lng" type="text" default="" label="Center map Longitude" description="Map Center point - Longitude" />
+				<field name="center_desc" type="centerdesclb" default="sds" label="" />
+
+				<field name="apikeytitle" type="header" default="Api Key Credentials" label="" />
+
+				<field name="apikey" type="text" default="" label="API KEY" description="Insert your API KEY" />
+				<field name="apikeydesc" type="apikeylb" default="sds" label="" />
+			</fieldset>
+			<fieldset name="Contacts" label="Contact Details" addfieldpath="/modules/mod_vikgooglemaps/params">
+				<field name="contact_header" type="text" label="Title" default="" />
+				<field name="contact_enabled" type="list" label="Contact enabled" default="1">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="contact_position" type="list" label="Contact position" default="vikcnt_left" description="Choose where to show the contact details box">
+					<option value="vikcnt_above">Above</option>
+					<option value="vikcnt_hover">Hover</option>
+					<option value="vikcnt_left">Left</option>
+					<option value="vikcnt_right">Right</option>
+				</field>
+				<field name="textarea_above" type="editor" label="Text above details" default="" width="300" filter="safehtml" description="Here you can insert a text that will be shown above the contact details" />
+				<field name="contact_address" type="text" label="Address" default="" description="Insert your address" />
+				<field name="contact_email" type="text" label="Email" default="" description="Insert your email" />
+				<field name="contact_tel" type="text" label="Telephone" default="" description="Insert your telephone" />
+				<field name="textarea_under" type="editor" label="Text under details" default="" width="300" filter="safehtml" description="Here you can insert a text that will be shown under the contact details" />
+			</fieldset>
+
+			<fieldset name="Locations" label="Locations" addfieldpath="/modules/mod_vikgooglemaps/params">
+				<field name="Location_01" type="header" default="Location 1" label="" />
+
+				<field name="viktitle_1" type="text" default="" label="Title" description="The title for your location" />
+				<field name="viklat_1" type="text" default="" label="Latitude" description="Latitude for this marker" />
+				<field name="viklng_1" type="text" default="" label="Longitude" description="Longitude for this marker" />
+				<field name="viktext_1" type="text" default="" label="Description" description="Description for this marker" filter="raw" />
+				<field name="vikshape_1" type="filelist" directory="/modules/mod_vikgooglemaps/src/markers/shapes" hide_default="0" default="" label="Marker Image" description="The image to be used as Marker" />
+				<field name="vikshadow_1" type="filelist" directory="/modules/mod_vikgooglemaps/src/markers/shadows" hide_default="0" default="" label="Marker Shadow Image" description="The image to be used as Shadow for the Marker" />
+			
+				<field name="Location_02" type="header" default="Location 2" label="" />
+
+				<field name="viktitle_2" type="text" default="" label="Title" description="The title for your location" />
+				<field name="viklat_2" type="text" default="" label="Latitude" description="Latitude for this marker" />
+				<field name="viklng_2" type="text" default="" label="Longitude" description="Longitude for this marker" />
+				<field name="viktext_2" type="text" default="" label="Description" description="Description for this marker" filter="raw" />
+				<field name="vikshape_2" type="filelist" directory="/modules/mod_vikgooglemaps/src/markers/shapes" hide_default="0" default="" label="Marker Image" description="The image to be used as Marker" />
+				<field name="vikshadow_2" type="filelist" directory="/modules/mod_vikgooglemaps/src/markers/shadows" hide_default="0" default="" label="Marker Shadow Image" description="The image to be used as Shadow for the Marker" />
+
+				<field name="Location_03" type="header" default="Location 3" label="" />
+
+				<field name="viktitle_3" type="text" default="" label="Title" description="The title for your location" />
+				<field name="viklat_3" type="text" default="" label="Latitude" description="Latitude for this marker" />
+				<field name="viklng_3" type="text" default="" label="Longitude" description="Longitude for this marker" />
+				<field name="viktext_3" type="text" default="" label="Description" description="Description for this marker" filter="raw" />
+				<field name="vikshape_3" type="filelist" directory="/modules/mod_vikgooglemaps/src/markers/shapes" hide_default="0" default="" label="Marker Image" description="The image to be used as Marker" />
+				<field name="vikshadow_3" type="filelist" directory="/modules/mod_vikgooglemaps/src/markers/shadows" hide_default="0" default="" label="Marker Shadow Image" description="The image to be used as Shadow for the Marker" />
+
+				<field name="Location_04" type="header" default="Location 4" label="" />
+
+				<field name="viktitle_4" type="text" default="" label="Title" description="The title for your location" />
+				<field name="viklat_4" type="text" default="" label="Latitude" description="Latitude for this marker" />
+				<field name="viklng_4" type="text" default="" label="Longitude" description="Longitude for this marker" />
+				<field name="viktext_4" type="text" default="" label="Description" description="Description for this marker" filter="raw" />
+				<field name="vikshape_4" type="filelist" directory="/modules/mod_vikgooglemaps/src/markers/shapes" hide_default="0" default="" label="Marker Image" description="The image to be used as Marker" />
+				<field name="vikshadow_4" type="filelist" directory="/modules/mod_vikgooglemaps/src/markers/shadows" hide_default="0" default="" label="Marker Shadow Image" description="The image to be used as Shadow for the Marker" />
+
+				<field name="Location_05" type="header" default="Location 5" label="" />
+
+				<field name="viktitle_5" type="text" default="" label="Title" description="The title for your location" />
+				<field name="viklat_5" type="text" default="" label="Latitude" description="Latitude for this marker" />
+				<field name="viklng_5" type="text" default="" label="Longitude" description="Longitude for this marker" />
+				<field name="viktext_5" type="text" default="" label="Description" description="Description for this marker" filter="raw" />
+				<field name="vikshape_5" type="filelist" directory="/modules/mod_vikgooglemaps/src/markers/shapes" hide_default="0" default="" label="Marker Image" description="The image to be used as Marker" />
+				<field name="vikshadow_5" type="filelist" directory="/modules/mod_vikgooglemaps/src/markers/shadows" hide_default="0" default="" label="Marker Shadow Image" description="The image to be used as Shadow for the Marker" />
+
+			</fieldset>	
+			<fieldset name="Advancedoptions" label="Advanced Options" addfieldpath="/modules/mod_vikgooglemaps/params">
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+				<field type="spacer" name="myspacer" hr="true" />
+
+				<field name="loadjq" type="radio" default="0" label="LOADJQ" description="LOADJQDESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field type="spacer" name="myspacer" hr="true" />
+
+				<field name="shadowpointleft" type="text" default="16" label="Shadows Left Point" description="Must be an Integer. Default 16" />
+				<field name="shadowpointright" type="text" default="34" label="Shadows Right Point" description="Must be an Integer. Default 34" />
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

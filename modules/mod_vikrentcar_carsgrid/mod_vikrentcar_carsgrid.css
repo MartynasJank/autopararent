@@ -1,0 +1,109 @@
+.vrcmodcarsgridcontainer {
+	width: 100%;
+	display: inline-block;
+}
+div.vrcinf {
+	float:left;
+	padding:0 0 0 8px;
+}
+.vrcmodcarsgridhorizontal {
+	list-style-type: none;
+}
+ul.vrcmodcarsgridhorizontal li {
+	display:inline-block;
+	margin:0;
+	padding: 0;
+	vertical-align: top;
+}
+ul.vrcmodcarsgridhorizontal li:last-child {
+	margin:0;
+}
+
+ul.vrcmodcarsgridhorizontal li img {
+	width:100%;	
+}
+
+ul.vrcmodcarsgridvertical {
+	list-style-type: none;
+}
+.vrcmodcarsgrid-item-desc {
+	margin: 10px 0;
+	padding: 0 20px;
+}
+.vrcmodcarsgridboxdiv {
+	width: 100%;
+	display: inline-block;
+	border:1px solid #ddd;
+	background:#fff !important;
+	transition: all 400ms ease-in-out 0s;
+}
+.vrcmodcarsgridboxdiv:hover {
+	-ms-transform: scale(1.05,1.05); /* IE 9 */
+    -webkit-transform: scale(1.05,1.05); /* Safari */
+    transform: scale(1.05,1.05);
+    transition: all 400ms ease-in-out 0s;
+    background:#fff !important;
+}
+.vrcmodcarsgridvertical img.vrcmodcarsgridimg {
+	max-width: 99% !important;
+	float:none;
+	clear:both;
+	margin: 0 0 5px 0;
+}
+img.vrcmodcarsgridimg {}
+
+span.vrcmodcarsgridname {
+	font-weight: bold;
+	font-size:15px;
+	color:#444;
+}
+
+.vrcmodcarsgridview {
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0;
+    padding-bottom:15px;
+}
+.vrcmodcarsgridview a {
+	display: inline-block;
+	padding:8px 25px;
+	border-radius: 3px;
+	background:#e7e7e7;
+	text-transform: uppercase;
+	font-size: 0.9em;
+}
+
+.vrcmodcarsgridcont-sorting {
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 28px;
+}
+.vrcmodcarsgridcont-items {
+	display: inline-block;
+	width: 100%;
+}
+.vrcmodcarsgridcont-item {
+	padding:10px;
+}
+.vrcmodcarsgrid-item_details {
+	text-align: center;
+	padding-top:10px;
+}
+.vrcmodcarsgrid-item_title {
+	font-size: 1.1em;
+	font-weight: 600;
+}
+.vrcmodcarsgrid-item_cat {
+	font-size: 0.8em;
+	color: #999;
+	border-top: 1px solid #eee;
+	padding: 7px 10px;
+	text-align: right;
+}
+@media only screen and (max-width: 600px) {
+	.vrcmodcarsgridhorizontal li {
+		width: 100%;
+	}
+}
+
